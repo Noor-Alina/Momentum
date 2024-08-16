@@ -1,16 +1,15 @@
-import "./Home.scss";
 import Header from "../../components/Header/Header";
 
 
-const Home = () => {
+const LogInPage = () => {
 
     return(
         <>
         <Header/>
-        <div className="Home">
+        <div className="LogIn">
 
         </div>
         </>
     )
 };
-export default Home;
+export default LogInPage;
