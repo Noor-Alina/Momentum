@@ -30,6 +30,7 @@ body {
     width: 100%;
     background-color: transparent;
     padding: 2rem;
+    z-index: 10;
 
     &__links-list{
         list-style-type: none;
@@ -39,7 +40,7 @@ body {
     &__item{
         text-decoration: none;
         padding: 0.40rem 1rem;
-        color: $Columbia-Blue;
+        color: $White;
         border:  0.125rem solid $Columbia-Blue;
         margin: 0 1rem;
         border-radius: 2rem;
