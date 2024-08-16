@@ -1,0 +1,11 @@
+@use '../../styles/break-points' as *;
+@use '../../styles/colors' as *;
+@use '../../styles/type' as *;
+@use '../../styles/mixins' as *;
+
+.Home{
+
+    height: 100vh;
+    background: $Black-Russian;
+    background: linear-gradient(135deg, $Black-Russian 0%, $Dark-Royal-Blue 36%, $Aqua-Blue 100%);
+}
