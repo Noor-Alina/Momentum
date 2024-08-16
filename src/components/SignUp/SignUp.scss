@@ -1,0 +1,11 @@
+@use '../../styles/break-points' as *;
+@use '../../styles/colors' as *;
+@use '../../styles/type' as *;
+@use '../../styles/mixins' as *;
+
+
+.SignUp{
+
+    height: 100vh;
+    background-color: $Columbia-Blue;
+}
