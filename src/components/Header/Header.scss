@@ -1,0 +1,61 @@
+@use '../../styles/break-points' as *;
+@use '../../styles/colors' as *;
+@use '../../styles/type' as *;
+@use '../../styles/mixins' as *;
+
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+  
+body {
+    margin: 0;
+    font-family: "Poppins";
+    font-weight: 400;
+}
+
+
+.Header{
+
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 2rem;
+
+    &__links-list{
+        list-style-type: none;
+        display: flex;
+    }
+
+    &__item{
+        text-decoration: none;
+        padding: 0.40rem 1rem;
+        color: $Columbia-Blue;
+        border:  0.125rem solid $Columbia-Blue;
+        margin: 0 1rem;
+        border-radius: 2rem;
+        font-size: 0.9rem;
+
+        &:hover{
+            cursor: pointer;
+            background-color: $Columbia-Blue;
+            color: $Prussian-Blue;
+        }
+
+        &--active{
+            background-color: $Columbia-Blue;
+            color: $Prussian-Blue;
+        }
+    }
+
+}
+
