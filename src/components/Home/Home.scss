@@ -1,0 +1,109 @@
+@use '../../styles/break-points' as *;
+@use '../../styles/colors' as *;
+@use '../../styles/type' as *;
+@use '../../styles/mixins' as *;
+
+.Home{
+
+    height: 100vh;
+    // width: 100vw;
+    background: $Black-Russian;
+    background: linear-gradient(135deg, $Black-Russian 0%, $Dark-Royal-Blue 36%, $Aqua-Blue 100%);
+    
+    display: flex; 
+    justify-content: center;
+    position: relative;
+
+    &__hero{
+        width: 100vw;
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+    }
+
+    &__hero-heading{
+        padding: 0 4rem;
+        width: 45%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+       
+    }
+
+    &__hero-heading-text{
+        margin: 0;
+        text-align: center; 
+        color: $Columbia-Blue;
+        font-size: 4rem;
+    }
+
+    &__hero-heading-button{
+        padding: 0.40rem 1.5rem;
+        margin: 0 4rem;
+        border: none;
+        background-color: transparent;
+        color: $White;
+        border:  0.125rem solid $Columbia-Blue;
+        border-radius: 2rem;
+        text-align: center;
+        font-weight: 600;
+        text-decoration: none;
+
+
+        &:hover{
+            cursor: pointer;
+            background-color: $Columbia-Blue;
+            color: $Prussian-Blue;
+        }
+    }
+
+    &__hero-graphic{
+        position: absolute;
+        right: 0;
+        bottom: 0; 
+        width: 35rem; 
+        height: 28rem; 
+        overflow: hidden; 
+        // position: relative;
+        
+
+       
+    }
+
+    &__hero-graphic-image{
+        width: 100%; 
+        height: auto; 
+        display: block; 
+        transform: translateX(3.125rem); 
+        transition: transform 0.5s ease; 
+        
+       
+    
+    }
+
+
+
+    @include desktop{
+
+        // &__hero{
+        //     gap: 3.5rem;
+    
+        // }
+
+        &__hero-graphic{
+            width: 40rem; 
+            height: 38rem; 
+        }
+
+        &__hero-graphic-image{
+            width: 100%; 
+            height: auto; 
+            display: block; 
+            transform: translateX(3.125rem); 
+            transition: transform 0.5s ease; 
+        }
+    }
+
+}
