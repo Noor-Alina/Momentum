@@ -1,4 +1,5 @@
 import Header from "../../components/Header/Header";
+import Workouts from "../../components/Workouts/Workouts";
 
 
 const WorkoutsPage = () => {
@@ -6,9 +7,7 @@ const WorkoutsPage = () => {
     return(
         <>
         <Header/>
-        <div className="Workouts">
-
-        </div>
+        <Workouts/>
         </>
     )
 };
