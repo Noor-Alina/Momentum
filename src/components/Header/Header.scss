@@ -32,6 +32,8 @@ body {
     padding: 2rem;
     z-index: 10;
 
+
+
     &__links-list{
         list-style-type: none;
         display: flex;
@@ -40,7 +42,6 @@ body {
     &__item{
         text-decoration: none;
         padding: 0.40rem 1rem;
-        color: $White;
         border:  0.125rem solid $Columbia-Blue;
         margin: 0 1rem;
         border-radius: 2rem;
@@ -49,12 +50,35 @@ body {
         &:hover{
             cursor: pointer;
             background-color: $Columbia-Blue;
-            color: $Prussian-Blue;
+            color: $Bice-Blue;
+        }
+
+        &--home{
+            color: $White;
+        }
+
+
+    }
+
+    &__item-auth{
+        text-decoration: none;
+        padding: 0.40rem 1rem;
+        color: $Bice-Blue;
+        border:  0.125rem solid $Columbia-Blue;
+        margin: 0 1rem;
+        border-radius: 2rem;
+        font-size: 0.9rem; 
+        
+        &:hover{
+            cursor: pointer;
+            background-color: $Columbia-Blue;
+            color: $Bice-Blue;
         }
 
         &--active{
-            background-color: $Columbia-Blue;
-            color: $Prussian-Blue;
+            border: none;
+            background-color: $Bice-Blue;
+            color: $White;
         }
     }
 
