@@ -25,6 +25,7 @@ body {
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 0;
     width: 100%;
@@ -32,11 +33,15 @@ body {
     padding: 2rem;
     z-index: 10;
 
-
+    &__links{
+        display: flex;
+        align-items: flex-start;
+    }
 
     &__links-list{
         list-style-type: none;
         display: flex;
+        align-items: center;
     }
 
     &__item{
@@ -79,6 +84,88 @@ body {
             border: none;
             background-color: $Bice-Blue;
             color: $White;
+        }
+    }
+
+    &__protected-item{
+        text-decoration: none;
+        padding: 0.40rem 1rem;
+        border:  0.125rem solid $Columbia-Blue;
+        margin: 0 1rem;
+        color: $Bice-Blue;
+        border-radius: 2rem;
+        font-size: 0.9rem;
+
+        &:hover{
+            cursor: pointer;
+            background-color: $Columbia-Blue;
+            color: $Bice-Blue;
+        }
+
+        &--active{
+            background-color: $Columbia-Blue;
+        }
+
+
+    }
+
+    &__avatar-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__avatar {
+        cursor: pointer;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        
+        
+    }
+
+    &__avatar-image{
+        width: 2.5rem;
+        height: 2.5rem;
+
+        &--active{
+            border: 0.15rem solid $Bice-Blue;
+            border-radius: 50%;
+        }
+    }
+
+
+    &__dropdown {
+        position: absolute;
+        top: 130%;
+        right: -1rem;
+        background-color: $White;
+        border: 0.063rem solid $Columbia-Blue;
+        border-radius: 0.25rem;
+        box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+    }
+
+    &__dropdown-item {
+        padding: 0.8rem 1.2rem;
+        text-decoration: none;
+        color: $Bice-Blue;
+        background-color: $Columbia-Blue;
+        display: block;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $White;
+        }
+
+        &--button{
+            border: none;
+            margin: 0;
+            text-align: center;
+            width: 100%;
         }
     }
 

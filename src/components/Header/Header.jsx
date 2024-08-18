@@ -1,24 +1,34 @@
 import "./Header.scss";
 import MomentumLogo from "../../assets/logo/momentum_logo.svg";
+import Momentum_avatar from "../../assets/images/Momentum_avatar.svg";
 import { NavLink, useLocation } from "react-router-dom";
-import { useAuth } from "../../context/AuthContext"; // Import useAuth to access user state
+import { useState } from "react";
+import { useAuth } from "../../context/AuthContext"; 
+
 
 const Header = () => {
     const location = useLocation();
-    const { isLoggedIn } = useAuth(); // Get user state from AuthContext
+    const { isLoggedIn, logOut} = useAuth(); // Get user state from AuthContext
+    const [isDropdownOpen, setDropdownOpen] = useState(false);
 
     // Determine which page is currently active
     const isHomePage = location.pathname === '/';
     const isLoginPage = location.pathname === '/LogIn';
     const isSignUpPage = location.pathname === '/SignUp';
     const isProtectedPage = ['/Workouts', '/Tracking', '/MealPlanning', '/Profile'].includes(location.pathname);
+    const isProfilePage = location.pathname === '/Profile';
+
+    const toggleDropdown = () => {
+        setDropdownOpen(!isDropdownOpen);
+    }
+
 
     return (
         <div className={`Header ${isLoginPage ? 'Header--login' : ''} ${isSignUpPage ? 'Header--signup' : ''} ${isProtectedPage ? 'Header--protected' : ''}`}>
             <div className="Header__logo">
-                <NavLink to="/">
+                <NavLink to={isLoggedIn() ? "/Workouts" : "/"}>
                     <img 
-                        className="header__logo-image" 
+                        className="Header__logo-image" 
                         src={MomentumLogo} 
                         alt="Momentum logo" 
                     />
@@ -57,7 +67,7 @@ const Header = () => {
                                 <NavLink 
                                     to="/Workouts" 
                                     className={({ isActive }) =>
-                                        isActive ? "Header__item Header__item--active" : "Header__item"
+                                        isActive ? "Header__protected-item Header__protected-item--active" : "Header__protected-item"
                                     }
                                 >
                                   Workouts
@@ -67,7 +77,7 @@ const Header = () => {
                                 <NavLink 
                                     to="/Tracking" 
                                     className={({ isActive }) =>
-                                        isActive ? "Header__item Header__item--active" : "Header__item"
+                                        isActive ? "Header__protected-item Header__protected-item--active" : "Header__protected-item"
                                     }
                                 >
                                   Tracking
@@ -77,21 +87,41 @@ const Header = () => {
                                 <NavLink 
                                     to="/MealPlanning" 
                                     className={({ isActive }) =>
-                                        isActive ? "Header__item Header__item--active" : "Header__item"
+                                        isActive ? "Header__protected-item Header__protected-item--active" : "Header__protected-item"
                                     }
                                 >
                                   Meal Plans
                                 </NavLink>
                             </li>
-                            <li>
-                                <NavLink 
+                            <li className="Header__avatar-container">
+
+                                <div className="Header__avatar"  onClick={toggleDropdown}>
+                                    <img 
+                                        className={isProfilePage? "Header__avatar-image Header__avatar-image--active" : "Header__avatar-image"}
+                                        src={Momentum_avatar} 
+                                        alt="User avatar" 
+                                    />
+                                </div>
+                                {isDropdownOpen && (
+                                    <div className="Header__dropdown">
+                                        <NavLink to="/Profile" className="Header__dropdown-item">
+                                            Profile
+                                        </NavLink>
+                                        <button onClick={logOut} className="Header__dropdown-item Header__dropdown-item--button">
+                                            Logout
+                                        </button>
+                                    </div>
+                                )}
+                                {/* <NavLink 
                                     to="/Profile" 
                                     className={({ isActive }) =>
                                         isActive ? "Header__item Header__item--active" : "Header__item"
                                     }
                                 >
                                   User Profile
-                                </NavLink>
+                                </NavLink> */}
+
+
                             </li>
                         </>
                     )}
