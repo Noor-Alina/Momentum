@@ -1,6 +1,7 @@
 import "./Header.scss";
 import MomentumLogo from "../../assets/logo/momentum_logo.svg";
 import Momentum_avatar from "../../assets/images/Momentum_avatar.svg";
+import MomentumProtectedLogo from "../../assets/logo/Momentum_logo-dl.svg";
 import { NavLink, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { useAuth } from "../../context/AuthContext"; 
@@ -17,11 +18,13 @@ const Header = () => {
     const isSignUpPage = location.pathname === '/SignUp';
     const isProtectedPage = ['/Workouts', '/Tracking', '/MealPlanning', '/Profile'].includes(location.pathname);
     const isProfilePage = location.pathname === '/Profile';
+    const isWorkoutsPage = location.pathname === '/Workouts';
 
     const toggleDropdown = () => {
         setDropdownOpen(!isDropdownOpen);
     }
 
+    const displayLogo = isLoggedIn() ? MomentumProtectedLogo : MomentumLogo;
 
     return (
         <div className={`Header ${isLoginPage ? 'Header--login' : ''} ${isSignUpPage ? 'Header--signup' : ''} ${isProtectedPage ? 'Header--protected' : ''}`}>
@@ -29,7 +32,7 @@ const Header = () => {
                 <NavLink to={isLoggedIn() ? "/Workouts" : "/"}>
                     <img 
                         className="Header__logo-image" 
-                        src={MomentumLogo} 
+                        src={displayLogo} 
                         alt="Momentum logo" 
                     />
                 </NavLink>
