@@ -7,5 +7,103 @@
 .SignUp{
 
     height: 100vh;
-    background-color: $Columbia-Blue;
+
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    &__container{
+
+        height: 100%;
+        width: 100%;
+        display: flex;
+
+    }
+
+    &__container-background{
+        height: 100%;
+        width: 50%;
+        background: linear-gradient(130deg, $Black-Russian 0%, blue 36%, $Aqua-Blue 100%);
+        border-radius: 0 0.5rem 0.5rem 0;
+    }
+
+    &__container-form{
+        width: 50%;
+        background-color: $White;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__container-form-form{
+        // background-color: blue;
+        height: 50%;
+        width: 75%;
+        padding: 0 2rem;
+    }
+
+    &__heading{
+        color: $Bice-Blue;
+        margin-bottom: 3rem;
+        font-size: 2.5rem;
+    }
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    &__form-input{
+        padding: 0.5rem;
+        box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.3); 
+        transition: box-shadow 0.3s ease; 
+
+        &:focus {
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); 
+            outline: none; 
+        }
+    }
+
+    &__form-input, &__form-button{
+        height: 2rem;
+        border-radius: 0.25rem;
+        border: none;
+    }
+
+    &__form-button{
+        margin-top: 1rem;
+        background-color: $Bice-Blue;
+        color: $White;
+        font-weight: 600;
+        cursor: pointer;
+
+        &:hover{
+            background-color: $Columbia-Blue;
+            color: $Bice-Blue;
+        }
+        &:active{
+            background-color: $Bice-Blue;
+            color: $White;
+        }
+    }
+
+    @include desktop{
+
+
+        &__container-form-form{
+            width: 60%;
+        }
+
+        &__heading{
+            margin-bottom: 3.5rem;
+            font-size: 3rem;
+        }
+
+        &__form{
+            gap: 2rem;
+        }
+    }
+
 }

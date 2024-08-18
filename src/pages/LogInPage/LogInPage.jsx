@@ -1,4 +1,5 @@
 import Header from "../../components/Header/Header";
+import LogIn from "../../components/LogIn/LogIn";
 
 
 const LogInPage = () => {
@@ -6,9 +7,7 @@ const LogInPage = () => {
     return(
         <>
         <Header/>
-        <div className="LogIn">
-
-        </div>
+        <LogIn/>
         </>
     )
 };
