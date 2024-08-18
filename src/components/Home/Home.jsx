@@ -15,17 +15,12 @@ const Home = () => {
                     <h1 className="Home__hero-heading-text">
                         Your journey to a healthier lifestyle starts here
                     </h1>
-                    {!isLoggedIn() ? (<Link to="/LogIn"
+                    <Link to="/LogIn"
                         className="Home__hero-heading-button"
                         >
                         JOIN NOW
-                    </Link>) : (
-                        <Link to="/Profile"
-                        className="Home__hero-heading-button"
-                        >
-                        GO TO PROFILE
                     </Link>
-                    )}
+                    
                 </div>
                 <div className="Home__hero-graphic">
                     <img className="Home__hero-graphic-image" src={HeroGraphic} alt="Momentum_hero_image" />
