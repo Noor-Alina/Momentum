@@ -14,6 +14,7 @@
     justify-content: center;
     position: relative;
 
+
     &__hero{
         width: 100vw;
         display: flex;
@@ -23,7 +24,7 @@
 
     &__hero-heading{
         padding: 0 4rem;
-        width: 45%;
+        width: 50%;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -33,10 +34,10 @@
     }
 
     &__hero-heading-text{
-        margin: 0;
-        text-align: center; 
+        margin: 0 0 0 4rem;
+        text-align: left; 
         color: $Columbia-Blue;
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     &__hero-heading-button{
@@ -55,7 +56,7 @@
         &:hover{
             cursor: pointer;
             background-color: $Columbia-Blue;
-            color: $Prussian-Blue;
+            color: $Bice-Blue;
         }
     }
 
