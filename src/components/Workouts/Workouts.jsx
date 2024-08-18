@@ -109,8 +109,9 @@ const Workouts = () => {
                     >
 
                         <option value="">All</option>
-                        <option value="strength">Strength</option>
-                        <option value="cardio">Cardio</option>
+                        <option value="Strength">Strength</option>
+                        <option value="Core">Core</option>
+                        <option value="Cardio">Cardio</option>
 
                     </select>
 
@@ -121,9 +122,9 @@ const Workouts = () => {
                         onChange={e => setWorkoutDifficulty(e.target.value)}
                     >
                         <option value="">All</option>
-                        <option value="beginner">Beginner</option>
-                        <option value="intermediate">Intermediate</option>
-                        <option value="advanced">Advanced</option>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
                     </select>
 
                     <button className="Workouts__filter-button" onClick={handleFilter}>Filter</button>
