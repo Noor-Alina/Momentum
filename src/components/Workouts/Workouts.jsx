@@ -130,16 +130,16 @@ const Workouts = () => {
                     <button className="Workouts__filter-button" onClick={handleFilter}>Filter</button>
 
                 </div>
-                <div className="Workout__content-container">
-                <div className="Workout__content-workoutList">
+                <div className="Workouts__content-container">
+                <div className="Workouts__content-workoutList">
                     {filteredWorkouts.map(workout => (
-                        <div key={workout.workout_id} className="Workout__content-workout">
-                            <h3 className="Workout__content-workout--heading">{workout.workout_name}</h3>
-                            <img className="Workout__content-workout--image" src={`${API_URL}${workout.image_path}`} alt={workout.workout_name} />
-                            <p className="Workout__content-workout--type">Type: {workout.workout_type}</p>
-                            <p className="Workout__content-workout--type">Muscle: {workout.muscle}</p>
-                            <p className="Workout__content-workout--difficulty">Difficulty: {workout.difficulty}</p>
-                            <p className="Workout__content-workout--instructions">Instructions: {workout.instructions}</p>
+                        <div key={workout.workout_id} className="Workouts__content-workout">
+                            <h3 className="Workouts__content-workout--heading">{workout.workout_name}</h3>
+                            <img className="Workouts__content-workout--image" src={`${API_URL}${workout.image_path}`} alt={workout.workout_name} />
+                            <p className="Workouts__content-workout--type">Type: {workout.workout_type}</p>
+                            <p className="Workouts__content-workout--type">Muscle: {workout.muscle}</p>
+                            <p className="Workouts__content-workout--difficulty">Difficulty: {workout.difficulty}</p>
+                            <p className="Workouts__content-workout--instructions">Instructions: {workout.instructions}</p>
                         </div>
                     ))}
                 </div>
