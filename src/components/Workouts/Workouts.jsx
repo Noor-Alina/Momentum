@@ -101,7 +101,7 @@ const Workouts = () => {
 
             <div className="Workouts">
                 <div className="Workouts__filter-container">
-                    <label className="Workouts__filter-label" htmlFor="workoutTypeDropdown">Workout Type:</label>
+                    <label className="Workouts__filter-label" htmlFor="workoutTypeDropdown">Workout Type</label>
                     <select className="Workouts__filter-dropdown"
                         id="workoutTypeDropdown"
                         value={workoutType}
@@ -115,7 +115,7 @@ const Workouts = () => {
 
                     </select>
 
-                    <label className="Workouts__filter-label" htmlFor="difficultyDropdown">Difficulty:</label>
+                    <label className="Workouts__filter-label" htmlFor="difficultyDropdown">Difficulty</label>
                     <select className="Workouts__filter-dropdown"
                         id="difficultyDropdown"
                         value={workoutDifficulty}

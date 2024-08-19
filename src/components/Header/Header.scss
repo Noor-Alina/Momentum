@@ -2,23 +2,7 @@
 @use '../../styles/colors' as *;
 @use '../../styles/type' as *;
 @use '../../styles/mixins' as *;
-
-
-html {
-    box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
-  
-body {
-    margin: 0;
-    font-family: "Poppins";
-    font-weight: 400;
-}
+@use '../../styles/global' as *;
 
 
 .Header{
@@ -103,6 +87,7 @@ body {
             background-color: $Bice-Blue;
             border:  0.125rem solid $Bice-Blue;
             color: $White;
+            box-shadow: 0 0.5rem 1rem rgba(0, 109, 170, 0.3); // Enhanced shadow on hover
         }
 
         &--active{

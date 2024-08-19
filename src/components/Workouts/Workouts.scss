@@ -2,6 +2,7 @@
 @use '../../styles/colors' as *;
 @use '../../styles/type' as *;
 @use '../../styles/mixins' as *;
+@use '../../styles/global' as *;
 
 
 .Workouts{
@@ -18,10 +19,10 @@
     &__filter-container{
         display: flex;
         gap: 1rem;
+        font-family: 'Poppins', sans-serif;
     }
 
     &__filter-label{
-        font-family: 'Poppins';
         color: $Bice-Blue;
         font-weight: 600;
         display: flex;
@@ -81,25 +82,49 @@
 
 
     &__content-workout{
-        background-color: $White;
-        border: 0.1rem solid $Columbia-Blue; 
-        border-radius: 1rem;
-        box-shadow: 0 0.25rem 0.5rem rgba(0, 109, 170, 0.5);
-        padding: 1.5rem;
-        width: 20rem;
-        margin-right: 1rem;
-
-        &--image{
-            width: 100%;
-            height: auto;
+        background-color: $White; // Background color of the card
+        border: 0.1rem solid $Columbia-Blue; // Border color
+        border-radius: 1rem; // Rounded corners
+        box-shadow: 0 0.25rem 0.5rem rgba(0, 109, 170, 0.5); // Subtle shadow for depth
+        padding: 1.5rem; // Padding inside the card
+        width: 20rem; // Fixed width for the card
+        margin-right: 1rem; // Margin to the right
+        transition: transform 0.3s, box-shadow 0.3s; // Transition for hover effects
+    
+        // Hover effect for the card
+        &:hover {
+            transform: translateY(-0.313rem); // Lift effect on hover
+            box-shadow: 0 0.5rem 1rem rgba(0, 109, 170, 0.3); // Enhanced shadow on hover
         }
-
-        &--heading, &--type, &--difficulty, &--instructions{
-            margin: 0;
+    
+        &--image {
+            width: 100%; // Full width of the card
+            height: auto; // Maintain aspect ratio
+            border-radius: 0.5rem; // Rounded corners for the image
+            margin-bottom: 1rem; // Margin below the image
+        }
+    
+        &--heading {
+            font-size: 1.5rem; // Font size for the heading
+            color: $Bice-Blue; // Color for the heading
+            margin: 0 0 0.5rem; // Margin below the heading
+            font-weight: 600; // Bold font weight
+            text-align: center;
+        }
+    
+        &--type,
+        &--difficulty,
+        &--instructions {
+            font-size: 1rem; // Font size for other text
+            color: $Bice-Blue; // Color for text
+            margin: 0.25rem 0; // Margin above and below the text
+        }
+    
+        &--instructions {
+            font-style: italic; // Italic style for instructions
+            color: darken($Bice-Blue, 10%); // Slightly darker color for instructions
         }
     }
-
-
 
 
 }

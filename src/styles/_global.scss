@@ -1,0 +1,23 @@
+@use './break-points' as *;
+@use './colors' as *;
+@use './type' as *;
+@use './mixins' as *;
+
+
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+  
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+
+
+}

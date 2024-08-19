@@ -2,10 +2,11 @@
 @use '../../styles/colors' as *;
 @use '../../styles/type' as *;
 @use '../../styles/mixins' as *;
+@use '../../styles/global' as *;
 
 .Home{
 
-    height: 100vh;
+    min-height: 100vh;
     // width: 100vw;
     background: $Black-Russian;
     background: linear-gradient(135deg, $Black-Russian 0%, blue 36%, $Aqua-Blue 100%);
