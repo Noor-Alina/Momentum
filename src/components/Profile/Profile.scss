@@ -1,0 +1,87 @@
+@use '../../styles/break-points' as *;
+@use '../../styles/colors' as *;
+@use '../../styles/type' as *;
+@use '../../styles/mixins' as *;
+
+.profile{
+
+    padding-left: 6rem;
+    padding-right: 6rem;
+    padding-top: 10rem;
+    height: 100vh;
+    background-color: $Columbia-Blue;
+
+
+
+    &__info-header{
+        font-family: 'Poppins';
+        color: $Bice-Blue;
+        font-size: 3rem;
+        border-bottom: 0.07rem solid $White;
+    }
+
+    &__update{
+        height: fit-content;
+        width: 40%;
+        padding: 2rem 2rem;
+        border-radius: 2rem;
+        background-color: $White;
+        box-shadow: 0 0.25rem 0.5rem rgba($color: $Black-Russian, $alpha: 0.3);
+        outline: none;
+    }
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+        // gap: 1.5rem;
+    }
+
+   &__form-input-label{
+
+        color: $Bice-Blue;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+    }
+
+    &__form-input{
+        padding: 0.5rem;
+        box-shadow: 0 0.25rem 0.5rem rgba($color: $Black-Russian, $alpha: 0.3);
+        transition: box-shadow 0.3s ease; 
+        color: $Black-Russian;
+        &:focus {
+            box-shadow: 0 0 1rem rgba($color: $Bice-Blue, $alpha: 0.3); 
+            outline: none; 
+        }
+    }
+
+    &__form-input, &__form-button{
+        height: 2rem;
+        border-radius: 0.25rem;
+        border: none;
+    }
+
+    &__form-button-container{
+        display: flex;
+        justify-content: center;
+    }
+
+    &__form-button{
+        margin-top: 1rem;
+        background-color: $Bice-Blue;
+        box-shadow: 0 0.25rem 0.5rem rgba($color: $Black-Russian, $alpha: 0.5);
+        color: $White;
+        font-weight: 600;
+        width: 50%; 
+        cursor: pointer;
+
+        &:hover{
+            background-color: $Columbia-Blue;
+            color: $Bice-Blue;
+        }
+        &:active{
+            background-color: $Bice-Blue;
+            color: $White;
+        }
+    }
+
+}

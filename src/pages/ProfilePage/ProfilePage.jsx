@@ -1,4 +1,5 @@
 import Header from "../../components/Header/Header";
+import Profile from "../../components/Profile/Profile";
 
 
 const ProfilePage = () => {
@@ -6,9 +7,7 @@ const ProfilePage = () => {
     return(
         <>
         <Header/>
-        <div className="Workouts">
-
-        </div>
+        <Profile/>
         </>
     )
 };
