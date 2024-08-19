@@ -26,7 +26,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
     background-color: transparent;
@@ -93,18 +93,23 @@ body {
         border:  0.125rem solid $Columbia-Blue;
         margin: 0 1rem;
         color: $Bice-Blue;
+        background-color: $White;
         border-radius: 2rem;
         font-size: 0.9rem;
         box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.3);
 
         &:hover{
             cursor: pointer;
-            background-color: $Columbia-Blue;
-            color: $Bice-Blue;
+            background-color: $Bice-Blue;
+            border:  0.125rem solid $Bice-Blue;
+            color: $White;
         }
 
         &--active{
-            background-color: $Columbia-Blue;
+            background-color: $Bice-Blue;
+            border:  0.125rem solid $Bice-Blue;
+            color: $White;
+
         }
 
 
@@ -139,14 +144,15 @@ body {
     }
 
 
+
     &__dropdown {
         position: absolute;
         top: 130%;
         right: -1rem;
         background-color: $White;
         border: 0.063rem solid $Columbia-Blue;
-        border-radius: 0.25rem;
         box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.5);
+        border-radius: 0.5rem;
         z-index: 1000;
     }
 
@@ -154,12 +160,13 @@ body {
         padding: 0.8rem 1.2rem;
         text-decoration: none;
         color: $Bice-Blue;
-        background-color: $Columbia-Blue;
+        background-color: $White;
         display: block;
         cursor: pointer;
 
         &:hover {
-            background-color: $White;
+            background-color: $Bice-Blue;
+            color: $White;
         }
 
         &--button{
