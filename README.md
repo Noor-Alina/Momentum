@@ -1,17 +1,15 @@
-## Project Proposal
+# Project Proposal
 
-# Project Title
-	Momentum
+## Project Title
+### Momentum
 	
 ## Overview
-	Momentum is an all-in-one fitness app that integrates various aspects of health and 
-	fitness management, catering to users' diverse needs.
 	Momentum is a fitness solution that combines workouts, fitness tracking, and meal 
 	planning into a single platform. By addressing the multifaceted nature of health and 
 	fitness, the app seeks to empower users to achieve their personal fitness goals 
 	effectively.
 	
-### Problem
+## Problem
 	Momentum is an all-in-one fitness app designed to help users achieve their health 
 	and fitness goals through a combination of workouts, fitness tracking, and meal 
 	planning. However, many individuals struggle to find a comprehensive fitness 
@@ -33,10 +31,8 @@
 	- As a user, I want to be able to login to my account to manage my fitness goals.
 	- As a logged in user, I want to be able to set up my own workout routines.
 	- As a logged in user, I want to be able to track certain fitness metrics. 
-	- As a logged in user, I want to be able to have meal plans created for me based on my 
-		nutrition goals. 
+	- As a logged in user, I want to be able to have meal plans created for me based on my nutrition goals. 
 		
-## Implementation
 
 ### Tech Stack
 	- React
@@ -65,7 +61,7 @@
 	- Workouts list by selection
 	- Meal Plans by selection
 	- Health tracking
-	-Profile
+	- Profile
 
 ### Endpoints
 
@@ -128,25 +124,19 @@ Response:
 		- Added before core features have first been implemented
 		- Store JWT in sessionStorage, remove when a user logs out
 		- May not need states to show different UI when logged in since
-			core features are only available after logging in
+		core features are only available after logging in
 			
 ## Roadmap
 	- Create client
-			- react project with routes and boilerplate pages (base pages) 
-			
+		- react project with routes and boilerplate pages (base pages) 	
 	- Create Server
-			- express project with routing with appropriate responses.
-			
+		- express project with routing with appropriate responses.
 	- Create database 
-	
 	- create migrations
-	
 	- gather data for 20-25 workouts 
-	
 	- create seeds with workout data
-	
 	- Develop all features
-	
+
 	--Feature: Home Page
 	
 	--Feature: Create account
@@ -168,8 +158,7 @@ Response:
 	
 	--Feature: Fitness tracking 
 			- Implement fitness tracking API 
-			- Create axios GET request to api with specific params - based on the fitness tracking 
-				type
+			- Create axios GET request to api with specific params - based on the fitness tracking type
 	
 	--Feature: List of Weekly Meals Plans 
 		- Implement Gemini API - link and api key
@@ -182,7 +171,7 @@ Response:
 	- DEMO DAY
 	
 ## Nice-to-haves
-	-	Forgot password functionality
+	- Forgot password functionality
 	- Unit and Integration Tests
 	- Extend User Profile: Full Name, fitness info - BMI, Height, Weight etc. 
 	- Extended features:
