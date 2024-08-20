@@ -126,7 +126,7 @@ Response:
 		- May not need states to show different UI when logged in since
 		core features are only available after logging in
 			
-## Roadmap
+### Roadmap
 	- Create client
 		- react project with routes and boilerplate pages (base pages) 	
 	- Create Server
@@ -170,7 +170,7 @@ Response:
 	
 	- DEMO DAY
 	
-## Nice-to-haves
+### Nice-to-haves
 	- Forgot password functionality
 	- Unit and Integration Tests
 	- Extend User Profile: Full Name, fitness info - BMI, Height, Weight etc. 
