@@ -1,0 +1,69 @@
+@use '../../styles/break-points' as *;
+@use '../../styles/colors' as *;
+@use '../../styles/type' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/global' as *;
+
+
+.Meal-plan-display {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    gap: 1rem;
+    max-width: 60rem; 
+    margin: 1.25rem auto; 
+    padding: 1.25rem; 
+    background-color: $Light;
+    border-radius: 0.5rem; 
+    box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+    
+    &__day {
+        padding: 0.9375rem; 
+        border: 1px solid $Whitish;
+        border-radius: 0.3125rem; 
+        background-color: $White;
+    }
+
+    &__day-heading {
+        font-size: 1.5rem; 
+        margin-bottom: 0.625rem; 
+        color: $Dark;
+    }
+
+    &__meals {
+        display: flex; /* Enable Flexbox for horizontal layout */
+        flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+        gap: 1rem; /* Space between meals */
+        margin-top: 0.625rem; 
+    }
+
+    &__meal {
+        flex: 1 1 calc(33.333% - 1rem); /* Flex properties for responsive layout */
+        min-width: 15rem; /* Ensure a minimum width for smaller screens */
+        padding: 1.5rem; 
+        border: 1px solid lighten($Whitish, 10%); 
+        border-radius: 0.3125rem; 
+        background-color: $White-Gray;
+    }
+
+    &__meal-type {
+        font-size: 1.25rem; 
+        margin: 0;
+        margin-bottom: 1rem;
+        color: $Primary-Blue;
+    }
+
+    &__meal-content {
+        margin: 0.3125rem 0; 
+    }
+
+    &__meal-ingrediant-list {
+        list-style-type: disc;
+        padding-left: 1.25rem; 
+    }
+
+    &__meal-ingrediant-item {
+        margin-bottom: 0.3125rem; 
+        color: $Brown-Gray;
+    }
+}
