@@ -5,7 +5,7 @@
 @use '../../styles/global' as *;
 
 
-.Workouts{
+.Workouts {
     padding-left: 4rem;
     padding-right: 4rem;
     padding-top: 10rem;
@@ -16,52 +16,77 @@
     background-color: $Columbia-Blue;
     min-height: 100vh;
 
-    &__filter-container{
-        display: flex;
-        gap: 1rem;
+    &__heading {
+        text-align: center;
+        margin-bottom: 3rem;
+        color: darken($Bice-Blue, 10%);
+        font-size: 2.5rem;
         font-family: 'Poppins', sans-serif;
     }
 
-    &__filter-label{
+    &__filter-container {
+        width: 100%;
+        display: flex;
+        justify-content: center; 
+        gap: 2rem; 
+        padding: 2rem; 
+        background-color: rgba($White, 0.95); 
+        border-radius: 1.5rem; 
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1); 
+    }
+
+    &__filter-label {
         color: $Bice-Blue;
         font-weight: 600;
+        font-size: 1.2rem; 
+        white-space: nowrap; 
         display: flex;
         align-items: center;
     }
 
-    &__filter-dropdown{
-        border-radius: 2rem;
-        width: 10rem;
-        padding: 0.25rem 1rem;
+    &__filter-dropdown {
+        height: fit-content;
+        border-radius: 1rem; 
+        width: 15rem; 
+        padding: 0.75rem; 
         border: 0.1rem solid $Columbia-Blue;
         color: $Bice-Blue;
-        box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.3);
+        background-color: rgba($White, 0.9);
+        transition: box-shadow 0.3s ease; 
+        box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1); 
 
-        &:focus{
+        &:focus {
             outline: none;
+            box-shadow: 0 0 0.5rem rgba($Bice-Blue, 0.5); 
+            border-color: $Bice-Blue; 
         }
 
-        &:hover{
+        &:hover {
             cursor: pointer;
+            border-color: darken($Columbia-Blue, 10%); 
         }
-
-       
     }
 
-
-    &__filter-button{
+    &__filter-button {
+        border-radius: 1rem; 
         width: 10rem;
-        margin-left: 1.5rem;
-        border-radius: 2rem;
         border: none;
-        color: $Bice-Blue;
-        background-color: $White;
-        box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.3);
+        color: $White;
+        background-color: $Bice-Blue;
+        padding: 0.75rem; 
+        font-size: 1.2rem; 
+        transition: background-color 0.3s, transform 0.2s; 
+        box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2); 
 
-        &:hover{
-            background-color: $Bice-Blue;
-            color: $White;
+        &:hover {
+            background-color: darken($Bice-Blue, 5%); 
+            transform: translateY(-0.125rem); 
             cursor: pointer;
+        }
+
+        &:active {
+            background-color: darken($Bice-Blue, 10%); 
+            transform: translateY(0); 
         }
     }
 
@@ -82,88 +107,49 @@
 
 
     &__content-workout{
-        background-color: $White; // Background color of the card
-        border: 0.1rem solid $Columbia-Blue; // Border color
-        border-radius: 1rem; // Rounded corners
-        box-shadow: 0 0.25rem 0.5rem rgba(0, 109, 170, 0.5); // Subtle shadow for depth
-        padding: 1.5rem; // Padding inside the card
-        width: 20rem; // Fixed width for the card
-        margin-right: 1rem; // Margin to the right
-        transition: transform 0.3s, box-shadow 0.3s; // Transition for hover effects
-    
-        // Hover effect for the card
+        background-color: $White; 
+        border: 0.1rem solid $Columbia-Blue; 
+        border-radius: 1rem; 
+        box-shadow: 0 0.25rem 0.5rem rgba(0, 109, 170, 0.5); 
+        padding: 1.5rem; 
+        width: 20rem; 
+        margin-right: 1rem; 
+        transition: transform 0.3s, box-shadow 0.3s; 
+      
         &:hover {
-            transform: translateY(-0.313rem); // Lift effect on hover
-            box-shadow: 0 0.5rem 1rem rgba(0, 109, 170, 0.3); // Enhanced shadow on hover
+            transform: translateY(-0.313rem); 
+            box-shadow: 0 0.5rem 1rem rgba(0, 109, 170, 0.3); 
         }
     
         &--image {
-            width: 100%; // Full width of the card
-            height: auto; // Maintain aspect ratio
-            border-radius: 0.5rem; // Rounded corners for the image
-            margin-bottom: 1rem; // Margin below the image
+            width: 100%; 
+            height: auto; 
+            border-radius: 0.5rem; 
+            margin-bottom: 1rem; 
         }
     
         &--heading {
-            font-size: 1.5rem; // Font size for the heading
-            color: $Bice-Blue; // Color for the heading
-            margin: 0 0 0.5rem; // Margin below the heading
-            font-weight: 600; // Bold font weight
+            font-size: 1.5rem; 
+            color: $Bice-Blue; 
+            margin: 0 0 0.5rem; 
+            font-weight: 600; 
             text-align: center;
         }
     
         &--type,
         &--difficulty,
         &--instructions {
-            font-size: 1rem; // Font size for other text
-            color: $Bice-Blue; // Color for text
-            margin: 0.25rem 0; // Margin above and below the text
+            font-size: 1rem;
+            color: $Bice-Blue; 
+            margin: 0.25rem 0; 
         }
     
         &--instructions {
-            font-style: italic; // Italic style for instructions
-            color: darken($Bice-Blue, 10%); // Slightly darker color for instructions
+            font-style: italic; 
+            color: darken($Bice-Blue, 10%); 
         }
     }
 
 
 }
 
-// .Workout {
-    
-//     &__content-container{
-//         width: 100%;
-//         display: flex;
-//         justify-content: center;
-//         padding-top: 4rem;
-//     }
-
-//     &__content-workoutList{
-//         display: flex;
-//         gap: 2.3rem;
-//         flex-wrap: wrap;
-//         justify-content: center;
-//         padding-bottom: 2rem;
-//     }
-
-
-//     &__content-workout{
-//         background-color: $White;
-//         border: 0.1rem solid $Columbia-Blue; 
-//         border-radius: 1rem;
-//         box-shadow: 0 0.25rem 0.5rem rgba(0, 109, 170, 0.5);
-//         padding: 1.5rem;
-//         width: 20rem;
-//         margin-right: 1rem;
-
-//         &--image{
-//             width: 100%;
-//             height: auto;
-//         }
-
-//         &--heading, &--type, &--difficulty, &--instructions{
-//             margin: 0;
-//         }
-//     }
-
-// }

@@ -58,48 +58,9 @@ const Workouts = () => {
 
     return(
         <>
-            {/* <div>
-                <label htmlFor="workoutTypeDropdown">Workout Type:</label>
-                <select
-                    id="workoutTypeDropdown"
-                    value={workoutType}
-                    onChange={e => setWorkoutType(e.target.value)}
-                >
-
-                    <option value="">All</option>
-                    <option value="strength">Strength</option>
-                    <option value="cardio">Cardio</option>
-
-                </select>
-
-                <label htmlFor="difficultyDropdown">Difficulty:</label>
-                <select
-                    id="difficultyDropdown"
-                    value={workoutDifficulty}
-                    onChange={e => setWorkoutDifficulty(e.target.value)}
-                >
-                    <option value="">All</option>
-                    <option value="beginner">Beginner</option>
-                    <option value="intermediate">Intermediate</option>
-                    <option value="advanced">Advanced</option>
-                </select>
-
-                <button onClick={handleFilter}>Filter Workouts</button>
-
-                <div id="workoutList">
-                    {filteredWorkouts.map(workout => (
-                        <div key={workout.workout_id} className="workout">
-                            <h3>{workout.workout_name}</h3>
-                            <p>Type: {workout.workout_type}</p>
-                            <p>Difficulty: {workout.difficulty}</p>
-                            <p>Instructions: {workout.instructions}</p>
-                            <img src={workout.image_path} alt={workout.workout_name} />
-                        </div>
-                    ))}
-                </div>
-            </div> */}
-
+            
             <div className="Workouts">
+            <h2 className="Workouts__heading">Build Your Workout Plan</h2>
                 <div className="Workouts__filter-container">
                     <label className="Workouts__filter-label" htmlFor="workoutTypeDropdown">Workout Type</label>
                     <select className="Workouts__filter-dropdown"
