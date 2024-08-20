@@ -13,7 +13,6 @@ const Workouts = () => {
     const [error, setError] = useState('');
 
 
-    //function to fetch all workouts from the back end
     const fetchAllWorkouts = async () => {
         try {
             const response = await axios.get(`${API_URL}/workouts/all`)
@@ -26,7 +25,6 @@ const Workouts = () => {
         }
     };
 
-    //fetch based on filters
     const filterWorkouts = async () => {
         try {
             const response = await axios.get(`${API_URL}/workouts`, {
@@ -46,12 +44,11 @@ const Workouts = () => {
     };
 
 
-    //fetch all workouts on mount
     useEffect(() => {
         fetchAllWorkouts();
     }, []);
 
-    //handler for filtering 
+ 
     const handleFilter = () => {
         filterWorkouts();
     };

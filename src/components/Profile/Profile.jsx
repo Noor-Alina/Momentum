@@ -22,12 +22,13 @@ const Profile = () => {
                     Authorization: `Bearer ${token}`, 
                 },
             });
-                setUser(response.data); 
-                setFormData({
-                    user_name: response.data.user_name,
-                    user_email: response.data.user_email,
-                    password: '' 
-                });
+
+            setUser(response.data); 
+            setFormData({
+                user_name: response.data.user_name,
+                user_email: response.data.user_email,
+                password: '' 
+            });
 
         } catch (error) {
             setError("Error fetching User profile", error);
@@ -54,9 +55,11 @@ const Profile = () => {
             if (response.status === 200) {
                 alert('Profile updated successfully!');
                 fetchUserProfile(); 
+
             }else{
                 alert('Failed to update profile.');
             }
+            
         }catch (error) {
             console.error('Error updating profile:', error);
             alert('An error occurred. Please try again.');

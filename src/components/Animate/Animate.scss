@@ -1,26 +1,26 @@
 
 
 .Rotating-svg-container {
-    position: fixed; // Fix the position to the viewport
-    left: -3%;// Align to the left edge of the screen
-    bottom: 0; // Align to the bottom of the screen
+    position: fixed; 
+    left: -3%;
+    bottom: 0; 
     display: flex;
     justify-content: center;
     align-items: flex-start;
     top: 10rem;
-    height: 100vh; // Optional: Center vertically in the viewport
+    height: 100vh;
 
     &__content{
-        animation: rotate 5s linear infinite; // Apply the bounce animation
-        width: 150px; // Set a width for the SVG
-        height: auto; // Maintain aspect ratio
+        animation: rotate 5s linear infinite; 
+        width: 9.375rem; 
+        height: auto; 
     
         @keyframes rotate {
             from {
-                transform: rotate(0deg); // Start rotation
+                transform: rotate(0deg);
               }
             to {
-                transform: rotate(360deg); // Complete rotation
+                transform: rotate(360deg);
               }
           }
     }

@@ -8,8 +8,6 @@
 .SignUp{
 
     height: 100vh;
-
-
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -38,7 +36,6 @@
     }
 
     &__container-form-form{
-        // background-color: blue;
         height: 50%;
         width: 75%;
         padding: 0 2rem;
@@ -62,7 +59,7 @@
         transition: box-shadow 0.3s ease; 
 
         &:focus {
-            box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); 
+            box-shadow: 0 0 0.625rem rgba(0, 123, 255, 0.5); 
             outline: none; 
         }
     }

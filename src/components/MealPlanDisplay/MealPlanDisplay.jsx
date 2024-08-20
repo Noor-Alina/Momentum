@@ -24,7 +24,7 @@ const MealPlanDisplay = ({ mealPlan }) => {
                                 <p className="Meal-plan-display__meal-content"><strong>Ingredients:</strong></p>
                                 <ul className="Meal-plan-display__meal-ingrediant-list">
                                     {meal.ingredients.map((ingredient, itemIndex) => (
-                                        <li className="Meal-plan-display__meal-ingrediant-item" key={itemIndex}>{ingredient}</li> // List each ingredient
+                                        <li className="Meal-plan-display__meal-ingrediant-item" key={itemIndex}>{ingredient}</li>
                                     ))}
                                 </ul>  
                             </div> 

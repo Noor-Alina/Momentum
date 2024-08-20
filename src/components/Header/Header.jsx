@@ -9,10 +9,9 @@ import { useAuth } from "../../context/AuthContext";
 
 const Header = () => {
     const location = useLocation();
-    const { isLoggedIn, logOut} = useAuth(); // Get user state from AuthContext
+    const { isLoggedIn, logOut} = useAuth(); 
     const [isDropdownOpen, setDropdownOpen] = useState(false);
 
-    // Determine which page is currently active
     const isHomePage = location.pathname === '/';
     const isLoginPage = location.pathname === '/LogIn';
     const isSignUpPage = location.pathname === '/SignUp';
@@ -39,7 +38,6 @@ const Header = () => {
             </div>
             <div className="Header__links">
                 <ul className="Header__links-list">
-                    {/* Show login and signup links only if the user is not logged in */}
                     {!isLoggedIn() ? (
                         <>
                             <li>
@@ -64,7 +62,6 @@ const Header = () => {
                             </li>
                         </>
                     ) : (
-                        // Show protected links only if the user is logged in
                         <>
                             <li>
                                 <NavLink 
@@ -115,16 +112,7 @@ const Header = () => {
                                         </button>
                                     </div>
                                 )}
-                                {/* <NavLink 
-                                    to="/Profile" 
-                                    className={({ isActive }) =>
-                                        isActive ? "Header__item Header__item--active" : "Header__item"
-                                    }
-                                >
-                                  User Profile
-                                </NavLink> */}
-
-
+                                
                             </li>
                         </>
                     )}

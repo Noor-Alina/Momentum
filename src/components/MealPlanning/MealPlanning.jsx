@@ -12,12 +12,11 @@ const MealPlanning = () => {
     const [mealPlan, setMealPlan] = useState([]); 
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
-    // const [lastMealPlan, setLastMealPlan] = useState([]);
 
     useEffect(() => {
         const storedMealPlan = localStorage.getItem('lastMealPlan');
         if (storedMealPlan) {
-            setMealPlan(JSON.parse(storedMealPlan)); // Load meal plan from local storage
+            setMealPlan(JSON.parse(storedMealPlan)); 
         }
     }, []);
 
@@ -38,7 +37,6 @@ const MealPlanning = () => {
         setLoading(true);
         setError('');
 
-         // Prepare the request payload
          const requestData = {
             dietType,
             days,
@@ -50,9 +48,7 @@ const MealPlanning = () => {
             console.log(response.data.content);
             const data = response.data.content;
             const parsedMealPlan = parseTextTOMealPlan(data);
-            console.log(parsedMealPlan);
             setMealPlan(parsedMealPlan);
-            // setLastMealPlan(parsedMealPlan);
             localStorage.setItem('lastMealPlan', JSON.stringify(parsedMealPlan));
             
         } catch (error) {
@@ -72,21 +68,21 @@ const MealPlanning = () => {
                                 .replace(/:\s*([0-9]+)(g|%|ml)?/g, ': "$1$2"') 
                                 .replace(/,\s*}/g, '}') 
                                 .replace(/,\s*]/g, ']')
-                                .replace(/:\s*"(\d+):(\d+)"\s*([AP]M)/g, ': "$1:$2 $3"')                                .replace(/"([^"]+)":\s*("[^"]*"|\d+g?|\d+%?|\d+ml?)(?=\s*"[a-zA-Z]+":)/g, '$&,')
+                                .replace(/:\s*"(\d+):(\d+)"\s*([AP]M)/g, ': "$1:$2 $3"')                           
                                 .replace(/"time":\s*"[^"]*"(,?)/g, '')
                                 .replace(/"(\d+)":\s*"(\d+)"\s*([AP]M)/g, '')
                                 .replace(/"([^"]+)":\s*("[^"]*"|\d+g?|\d+%?|\d+ml?)(?=\s*"[a-zA-Z]+":)/g, '$&,')
-                                
                                 .trim(); 
                 
-                const lastBraceIndex = cleanedData.lastIndexOf('}');
-                if (lastBraceIndex !== -1) {
-                        cleanedData = cleanedData.substring(0, lastBraceIndex + 1);
-                    }
-                if (!cleanedData.startsWith('[')) {
-                        cleanedData = '[' + cleanedData + ']';
-                }
-                console.log('Cleaned Text:', cleanedData);
+        const lastBraceIndex = cleanedData.lastIndexOf('}');
+                
+        if (lastBraceIndex !== -1) {
+            cleanedData = cleanedData.substring(0, lastBraceIndex + 1);
+        }
+                
+        if (!cleanedData.startsWith('[')) {
+            cleanedData = '[' + cleanedData + ']';
+        }
 
         try {
             const mealPlanObj = JSON.parse(cleanedData);
