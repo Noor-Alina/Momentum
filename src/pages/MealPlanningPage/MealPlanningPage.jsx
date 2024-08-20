@@ -1,14 +1,12 @@
 import Header from "../../components/Header/Header";
-
+import MealPlanning from "../../components/MealPlanning/MealPlanning";
 
 const MealPlanningPage = () => {
 
     return(
         <>
         <Header/>
-        <div className="Workouts">
-
-        </div>
+        <MealPlanning/>
         </>
     )
 };
