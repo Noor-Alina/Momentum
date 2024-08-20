@@ -67,12 +67,6 @@
 	- Health tracking
 	-Profile
 
-### Mockups
-
-### Data
-
-![](Momentun_schema.png)
-
 ### Endpoints
 
 **POST /auth/SignUp**
