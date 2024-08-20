@@ -1,0 +1,112 @@
+@use '../../styles/break-points' as *;
+@use '../../styles/colors' as *;
+@use '../../styles/type' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/global' as *;
+
+
+.MealPlanning{
+
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: $Columbia-Blue;
+    min-height: 100vh;
+    font-family: 'Poppins';
+
+   &__heading{
+    text-align: center;
+    margin-bottom: 3rem;
+    color: darken($Bice-Blue, 10%);
+    font-size: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+   }
+
+   &__form-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem; 
+}
+
+    &__form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem; 
+        min-width: 100%; 
+        background-color: rgba($White, 0.95); 
+        border-radius: 1.5rem; 
+        padding: 2rem; 
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1); 
+    }
+
+    &__form-label {
+        font-family: 'Poppins', sans-serif;
+        color: $Bice-Blue;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        font-size: 1rem; 
+        white-space: nowrap; 
+       
+    }
+    &__form-dropdown,
+    &__form-input {
+        height: fit-content;
+        border-radius: 1rem; 
+        width: 15rem; 
+        padding: 0.75rem; 
+        border: 0.1rem solid $Columbia-Blue;
+        color: $Bice-Blue;
+        background-color: rgba($White, 0.9); 
+        transition: box-shadow 0.3s ease; 
+
+        box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1); 
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0.5rem rgba($Bice-Blue, 0.5); 
+            border-color: $Bice-Blue; 
+        }
+
+        &:hover {
+            cursor: pointer;
+            border-color: darken($Columbia-Blue, 10%); 
+        }
+    }
+
+
+
+    &__form-button {
+        height: fit-content;
+        width: 10rem; 
+        border-radius: 1rem; 
+        border: none;
+        color: $White;
+        background-color: $Bice-Blue;
+        padding: 0.75rem; 
+        box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2);
+        font-size: 1.2rem; 
+        transition: background-color 0.3s, transform 0.2s; 
+
+        &:hover {
+            background-color: darken($Bice-Blue, 5%); 
+            transform: translateY(-0.125rem); 
+            cursor: pointer;
+        }
+
+        &:active {
+            background-color: darken($Bice-Blue, 10%); 
+            transform: translateY(0); 
+        }
+    }
+
+    &__error-message, &__loading-message{
+        color: darken($Bice-Blue, 10%);
+    }
+}
