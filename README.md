@@ -56,7 +56,6 @@
 ### APIs
 	- External APIs:
 		- Gemini AI API - for meal plan generation 
-		- Workout API + muscle image generation api  could create on my own  creating own 
 		- Health Tracker API  
 		
 ### Sitemap
@@ -108,6 +107,26 @@ Response:
     eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6I..."
 }
 ```
+
+**GET /user/profile**
+
+- Get User info
+
+**PUT /user/profile**
+
+- Update user info
+
+**GET /Workouts/all**
+
+- get all workouts
+
+**GET /Workouts**
+
+- get workouts by type and difficulty 
+
+**POST /gemini/generate-content**
+
+- post prompt parameter - data payload
 
 ### Auth
 	- JWT auth
