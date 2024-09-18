@@ -13,8 +13,9 @@ const Home = () => {
             <div className="Home__hero">
                 <div className="Home__hero-heading">
                     <h1 className="Home__hero-heading-text">
-                        Your journey to a healthier lifestyle starts here
+                        MOMENTUM
                     </h1>
+                    <h3  className="Home__hero-heading-subtext">Your journey to a healthier lifestyle starts here!</h3>
                     <Link to="/LogIn"
                         className="Home__hero-heading-button"
                         >
