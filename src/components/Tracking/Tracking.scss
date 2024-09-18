@@ -1,0 +1,143 @@
+@use '../../styles/break-points' as *;
+@use '../../styles/colors' as *;
+@use '../../styles/type' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/global' as *;
+
+.Tracking {
+    background-color: $Columbia-Blue;
+    min-height: 100vh;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 10rem;
+    padding-bottom: 4rem;
+    font-family: 'Poppins', sans-serif;
+
+    &__container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &__heading {
+        font-size: 2.5rem;
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 3rem;
+        font-weight: 700;
+    }
+
+    &__profile-card {
+        background-color: #ffffff;
+        border-radius: 1rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        padding: 2rem;
+        margin-bottom: 3rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &__profile-avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #3498db;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+        color: #ffffff;
+        margin-right: 2rem;
+    }
+
+    &__profile-info {
+        flex: 1;
+    }
+
+    &__profile-name {
+        font-size: 1.8rem;
+        color: #2c3e50;
+        margin: 0 0 0.5rem;
+    }
+
+    &__profile-details {
+        font-size: 1rem;
+        color: #7f8c8d;
+    }
+
+    &__fitness-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    &__section {
+        background-color: #ffffff;
+        border-radius: 1rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        padding: 2rem;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+    }
+
+    &__section-title {
+        font-size: 1.5rem;
+        color: #2c3e50;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #3498db;
+    }
+
+    &__stat {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+    }
+
+    &__stat-label {
+        color: #7f8c8d;
+    }
+
+    &__stat-value {
+        font-weight: 700;
+        color: #2c3e50;
+    }
+
+    &__food-list {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    &__food-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #ecf0f1;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    &__food-name {
+        color: #2c3e50;
+    }
+
+    &__food-calories {
+        font-weight: 700;
+        color: #e74c3c;
+    }
+
+
+    &__loading-message, &__error-message{
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        text-align: center;
+        padding: 25rem;
+        color: darken($Bice-Blue, 10%);
+    }
+}

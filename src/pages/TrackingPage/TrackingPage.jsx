@@ -1,4 +1,5 @@
 import Header from "../../components/Header/Header";
+import Tracking from "../../components/Tracking/Tracking";
 
 
 const TrackingPage = () => {
@@ -6,9 +7,7 @@ const TrackingPage = () => {
     return(
         <>
         <Header/>
-        <div className="Workouts">
-
-        </div>
+        <Tracking/>
         </>
     )
 };
