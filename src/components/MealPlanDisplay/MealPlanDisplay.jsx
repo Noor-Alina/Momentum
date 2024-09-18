@@ -3,8 +3,6 @@ import React from 'react';
 
 
 const MealPlanDisplay = ({ mealPlan }) => {
-    console.log("in display component");
-
 
     if (!mealPlan || mealPlan.length === 0) {
         console.log("No meal plan");
