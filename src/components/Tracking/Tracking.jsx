@@ -29,9 +29,6 @@ const Tracking = () => {
         const urlParams = new URLSearchParams(window.location.search);
         const accessToken = urlParams.get('access_token');
 
-        console.log("Current URL:", window.location.href);
-        console.log("Access Token:", accessToken);
-
         if (accessToken){
             fetchData(accessToken);
         }else{
